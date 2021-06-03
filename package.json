@@ -1,0 +1,14 @@
+{
+  "name": "id3-cli-batch",
+  "version": "0.0.1",
+  "description": "CLI tool for batch editing ID3 tags of multiple MP3 files",
+  "bin": {
+    "id3": "./lib/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "Leko/id3-cli",
+  "author": "Leko <leko.noor@gmail.com>",
+  "license": "MIT"
+}
