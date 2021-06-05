@@ -1,6 +1,6 @@
 {
   "name": "id3-cli-batch",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "CLI tool for batch editing ID3 tags of multiple MP3 files",
   "bin": {
     "id3": "./lib/cli.js"
