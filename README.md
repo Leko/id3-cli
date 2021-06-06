@@ -13,7 +13,48 @@ npm install -g id3-cli-batch
 ## Usage
 
 ```
-id3 'path/to/*.mp3' --album 'Album name' --artist 'Artist name' --picture path/to/image.jpg --out-dir path/to/out
+Usage: id3 <pattern> [...options]
+
+Arguments:
+  pattern: A glob pattern to specify the target file
+
+ID3 options:
+  --title           song title (TIT2)
+  --artist          song artists (TPE1)
+  --album           album title (TALB)
+  --track           song number in album (TRCK)
+  --genre           song genres (TCON)
+  --picture         attached picture (APIC)
+  --increment-track set a sequential number from 1 to the songs you specified. The order is ascending by file name
+
+Output options: either one is required
+  --overwrite       overwrite the original file
+  --out-dir         output files to the specified directory
+
+Other options:
+  --help            show this help
+```
+
+### Convert ID3 tags into UTF8
+
+If no options are passed, the original value will be kept.
+
+```
+id3 'path/to/*' --overwrite
+```
+
+### Change album name and artists
+
+`--artist` can take multiple values
+
+```
+id3 'path/to/*' --album 'Name' --artist 'Artist1' --artist 'Artist2' --out-dir path/to/out
+```
+
+### Set cover image
+
+```
+id3 'path/to/*' --picture 'path/to/image.jpg' --out-dir path/to/out
 ```
 
 ## License
