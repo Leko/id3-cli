@@ -4,6 +4,10 @@
 
 CLI tool for batch editing ID3 tags of multiple MP3 files
 
+- Batch fix garbled characters (non-UTF8 encoding) in old mp3 files
+- Batch editing of meta information such as album name and artist
+- Batch reassign track numbers from 1 to sequential numbers.
+
 ## Install
 
 ```
