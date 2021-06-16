@@ -11,10 +11,10 @@ CLI tool for batch editing ID3 tags of multiple MP3 files
 ## Install
 
 ```
-npm install -g id3-cli-batch
+npm install id3-cli-batch
 ```
 
-## Usage
+## CLI Usage
 
 ```
 Usage: id3 <pattern> [...options]
@@ -59,6 +59,28 @@ id3 'path/to/*' --album 'Name' --artist 'Artist1' --artist 'Artist2' --out-dir p
 
 ```
 id3 'path/to/*' --picture 'path/to/image.jpg' --out-dir path/to/out
+```
+
+## Node.js API
+
+```js
+const { transformByPattern } = require('id3-cli-batch')
+
+const options = {
+  album: '...',
+  artist: ['...'],
+  genre: '...',
+  incrementTrack: true,
+  outDir: '/path/to/out',
+  picture: '/path/to/picture.jpg',
+  title: '...',
+  track: 1,
+}
+transformByPattern('/path/to/audio/**/*', options)
+  .then((outPaths) => console.log(outPaths))
+  .catch((e) => {
+    console.error(e)
+  })
 ```
 
 ## License
