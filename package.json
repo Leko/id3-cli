@@ -16,7 +16,7 @@
     "arg": "^5.0.0",
     "browser-id3-writer": "^4.4.0",
     "encoding-japanese": "^1.0.30",
-    "glob": "^7.1.7",
+    "glob": "^13.0.6",
     "jsmediatags": "^3.9.7"
   },
   "devDependencies": {
